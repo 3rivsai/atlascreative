@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Creative — Copywriting, Marketing & AI Automation</title>
+  <meta name="description"
+    content="Atlas Creative helps brands grow with expert copywriting, strategic marketing, and cutting-edge AI automation." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            surface: '#0a0a0a',
+            surfaceLight: '#111111',
+            surfaceCard: 'rgba(255,255,255,0.04)',
+            borderSubtle: 'rgba(255,255,255,0.08)',
+            borderHover: 'rgba(255,255,255,0.20)',
+            accent: '#ffffff',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Smooth reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero gradient accent */
+    .hero-glow {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.06) 40%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    /* Button glow on hover */
+    .btn-glow {
+      transition: box-shadow 0.4s ease, transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.3), 0 0 80px rgba(139, 92, 246, 0.12);
+      transform: scale(1.03);
+    }
+
+    /* Glassmorphism card */
+    .glass-card {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(129, 120, 246, 0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Fine grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ensure content sits above grain */
+    body>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Subtle divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06) 50%, transparent);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-white antialiased selection:bg-white/10">
+
+  <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5"
+    style="background: rgba(10,10,10,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.04);">
+    <a href="#" class="text-lg font-bold tracking-tight">Atlas Creative</a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-white/50">
+      <a href="#services" class="hover:text-white transition-colors duration-300">Services</a>
+      <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+    </div>
+    <a href="#contact"
+      class="text-sm font-medium px-5 py-2 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300">Get
+      in Touch</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+    <div class="hero-glow"></div>
+
+    <div class="reveal max-w-4xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] font-medium mb-6"
+        style="background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Copywriting · Marketing · AI Automation</p>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8">
+        Words that move.<br />
+        <span
+          style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Strategy
+          that scales.</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-white/40 max-w-xl mx-auto mb-12 leading-relaxed">
+        We craft high-impact copy, build marketing systems, and deploy AI automation — so your brand grows while you
+        sleep.
+      </p>
+
+      <a href="#contact"
+        class="btn-glow inline-flex items-center gap-2 font-semibold text-base px-8 py-4 rounded-full text-white"
+        style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+        Start a Project
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div
+      class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20 text-xs tracking-widest">
+      <span>SCROLL</span>
+      <div class="w-px h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════════════════════════ SERVICES ═══════════════════════════════════ -->
+  <section id="services" class="py-32 md:py-40 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="reveal mb-20 max-w-2xl">
+        <p class="text-sm uppercase tracking-[0.3em] font-medium mb-4"
+          style="background: linear-gradient(90deg, #818cf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          What We Do</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Three pillars.<br /><span
+            style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">One
+            relentless focus on growth.</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card 1: Copywriting -->
+        <div class="reveal glass-card rounded-2xl p-8 md:p-10 flex flex-col">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+            style="background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.08));">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 tracking-tight">Copywriting</h3>
+          <p class="text-white/40 leading-relaxed text-sm flex-1">Compelling narratives and conversion-driven copy that
+            captures your brand voice and turns browsers into buyers.</p>
+          <div class="mt-8 pt-6 border-t border-white/5">
+            <ul class="text-xs text-white/30 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Brand Messaging
+              </li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Website &
+                Landing Pages</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Email Sequences
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Marketing -->
+        <div class="reveal glass-card rounded-2xl p-8 md:p-10 flex flex-col" style="transition-delay: 0.1s;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+            style="background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.08));">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 tracking-tight">Marketing</h3>
+          <p class="text-white/40 leading-relaxed text-sm flex-1">Data-driven strategies that put your brand in front of
+            the right audience at the right time, every time.</p>
+          <div class="mt-8 pt-6 border-t border-white/5">
+            <ul class="text-xs text-white/30 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Growth Strategy
+              </li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Paid Media & SEO
+              </li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Funnel
+                Optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: AI Automation -->
+        <div class="reveal glass-card rounded-2xl p-8 md:p-10 flex flex-col" style="transition-delay: 0.2s;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+            style="background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.08));">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 tracking-tight">AI Automation</h3>
+          <p class="text-white/40 leading-relaxed text-sm flex-1">Custom AI workflows that automate repetitive tasks,
+            qualify leads, and deliver personalized experiences at scale.</p>
+          <div class="mt-8 pt-6 border-t border-white/5">
+            <ul class="text-xs text-white/30 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>AI Chatbots &
+                Agents</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Workflow
+                Automation</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Custom
+                Integrations</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════════ -->
+  <section id="contact" class="py-32 md:py-40 px-6 md:px-12">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <div class="reveal">
+        <p class="text-sm uppercase tracking-[0.3em] font-medium mb-4"
+          style="background: linear-gradient(90deg, #818cf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Get in Touch</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">Let's build<br /><span
+            style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">something
+            great.</span></h2>
+        <p class="text-white/40 text-lg mb-12 max-w-md mx-auto leading-relaxed">Ready to elevate your brand? Give us a
+          call — we'd love to hear about your project.</p>
+
+        <a href="tel:2817165547"
+          class="btn-glow inline-flex items-center gap-3 font-semibold text-lg px-10 py-5 rounded-full text-white"
+          style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          Call Now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="border-t border-white/5 py-10 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/20">
+      <span>&copy; 2026 Atlas Creative. All rights reserved.</span>
+      <div class="flex items-center gap-6">
+        <a href="#services" class="hover:text-white/50 transition-colors">Services</a>
+        <a href="#contact" class="hover:text-white/50 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ SCROLL REVEAL ═══════════════════════════════════ -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
