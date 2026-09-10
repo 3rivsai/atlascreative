@@ -1,0 +1,1 @@
+import{t as e}from"/atlas-_next-static-chunks-index-CwpOE-Fa.js";var t,n,r=!1,i=new Promise(e=>{t=e}),a=!1;function o(){if(r=!0,!a)return n||=async function(){let n=await e(()=>import(`/atlas-_next-static-chunks-opentype-W4k6rhFE.js`),[]);t(n),a=!0}()}export{o as n,r,i as t};
