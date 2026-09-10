@@ -1,0 +1,1 @@
+import"/atlas-_next-static-chunks-runtime-chunk-BVVSZMXD-DIQHaosr.js";import"/atlas-_next-static-chunks-runtime-chunk-ML3Z74BL-BecQZq17.js";import{j as e}from"/atlas-_next-static-chunks-runtime-chunk-WKTS4T2Q-BaWVkEJk.js";export{e as updateDocumentSchema};
